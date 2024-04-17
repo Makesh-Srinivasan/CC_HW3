@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.879.0.min.js"></script>
+    <script type="text/javascript" src="sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="sdk/lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="sdk/lib/apiGatewayCore/utils.js"></script>
+    <script src="sdk/apigClient.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 id="heading"> Photos </h1>
+    <div id="searchSection">
+        <input type="text" id="textInput" placeholder="Enter text">
+        <button onclick="getPhotos()">Search Photos</button>
+    </div>
+
+    <div id="photoLinks"></div>
+
+    <div id="uploadSection">
+        <input type="file" id="photoUpload">
+        <input type="text" id="labelInput" placeholder="Enter Labels">
+        <button onclick="uploadPhoto()">Upload Photo</button>
+    </div>
+</body>
+</html>
